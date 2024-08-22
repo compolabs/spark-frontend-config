@@ -30,6 +30,7 @@ export interface Contracts {
 }
 
 export interface Config {
+  version: string;
   tokens: Token[];
   markets: Market[];
   indexers: Indexer[];

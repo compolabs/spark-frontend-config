@@ -1,6 +1,9 @@
 import { Config } from "../types";
 
+import packageJson from "../../package.json";
+
 const data: Config = {
+  version: packageJson.version,
   tokens: [],
   markets: [],
   indexers: [
