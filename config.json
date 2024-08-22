@@ -27,6 +27,7 @@
   ],
   "markets": [
     {
+      "marketName": "BTCUSDC",
       "owner": "0xf47e0ef744ac8c993550e03d17f1c4844494553a12cac11ab8c568c8999fdbbf",
       "baseAssetId": "0xccceae45a7c23dcd4024f4083e959a0686a191694e76fa4fb76c449361ca01f7",
       "baseAssetDecimals": 8,

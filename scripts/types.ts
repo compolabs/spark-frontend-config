@@ -8,6 +8,7 @@ export interface Token {
 }
 
 export interface Market {
+  marketName: string;
   owner: string;
   baseAssetId: string;
   baseAssetDecimals: number;

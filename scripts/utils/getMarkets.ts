@@ -1,11 +1,17 @@
 import SparkOrderbook from "@compolabs/spark-orderbook-ts-sdk";
-import { Market } from "../types";
+import { Market, Token } from "../types";
+
+import { formatMarketName } from "./formatMarketName";
 
 export const getMarkets = async (
-  assetPairs: [string, string][],
+  assetPairs: [Token, Token][],
   orderbookSdk: SparkOrderbook
 ): Promise<Market[]> => {
-  const markets = await orderbookSdk.fetchMarkets(assetPairs);
+  const pairs = assetPairs.map(
+    ([tokenA, tokenB]) => [tokenA.assetId, tokenB.assetId] as [string, string]
+  );
+
+  const markets = await orderbookSdk.fetchMarkets(pairs);
   const marketsIds = Object.values(markets);
 
   const marketConfigPromises = marketsIds.map((marketId) =>
@@ -15,6 +21,7 @@ export const getMarkets = async (
   const marketConfigs = await Promise.all(marketConfigPromises);
 
   return marketConfigs.map((info, index) => ({
+    marketName: formatMarketName(info.baseAssetId, info.quoteAssetId),
     owner: info.owner,
     baseAssetId: info.baseAssetId,
     baseAssetDecimals: info.baseAssetDecimals,
