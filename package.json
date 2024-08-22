@@ -1,0 +1,26 @@
+{
+  "name": "spark-frontend-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./scripts/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compolabs/spark-frontend-config.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@compolabs/spark-orderbook-ts-sdk": "^1.5.4",
+    "@types/node": "^22.5.0",
+    "fuels": "^0.94.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "react": "^18.3.1"
+  }
+}
