@@ -9,8 +9,8 @@ const data: Config = {
   markets: [],
   indexers: {
     "0x58959d086d8a6ee8cf8eeb572b111edb21661266be4b4885383748d11b72d0aa": {
-      httpUrl: "https://indexer.bigdevenergy.link/c940d97/v1/graphql",
-      wsUrl: "wss://indexer.bigdevenergy.link/c940d97/v1/graphql",
+      httpUrl: "https://indexer.bigdevenergy.link/67b693c/v1/graphql",
+      wsUrl: "wss://indexer.bigdevenergy.link/67b693c/v1/graphql",
     },
   },
   contracts: {
