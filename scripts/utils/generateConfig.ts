@@ -15,11 +15,14 @@ export const generateConfig = async (): Promise<void> => {
 
   const markets = await getMarkets(pairs, sdk);
 
+  const contractConfig = await sdk.getVersion();
+
   const newConfig: Config = {
     ...baseConfig,
+    contractVer: contractConfig.version,
     tokens: [...baseConfig.tokens, ...tokens],
     markets: [...baseConfig.markets, ...markets],
-    indexers: [...baseConfig.indexers],
+    indexers: { ...baseConfig.indexers },
     contracts: {
       ...baseConfig.contracts,
     },

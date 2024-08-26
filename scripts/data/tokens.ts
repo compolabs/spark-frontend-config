@@ -16,7 +16,7 @@ const data: Token[] = [
     symbol: "BTC",
     decimals: 8,
     assetId:
-      "0xccceae45a7c23dcd4024f4083e959a0686a191694e76fa4fb76c449361ca01f7",
+      "0x38e4ca985b22625fff93205e997bfc5cc8453a953da638ad297ca60a9f2600bc",
     priceFeed:
       "0xe62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43",
     precision: 8,
@@ -26,7 +26,7 @@ const data: Token[] = [
     symbol: "USDC",
     decimals: 6,
     assetId:
-      "0xfed3ee85624c79cb18a3a848092239f2e764ed6b0aa156ad10a18bfdbe74269f",
+      "0x336b7c06352a4b736ff6f688ba6885788b3df16e136e95310ade51aa32dc6f05",
     priceFeed:
       "0xeaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a",
     precision: 2,

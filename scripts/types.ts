@@ -20,20 +20,22 @@ export interface Market {
 }
 
 export interface Indexer {
-  marketContactId: string;
   httpUrl: string;
   wsUrl: string;
 }
 
 export interface Contracts {
   orderbook: string;
+  multiAsset: string;
 }
 
 export interface Config {
   version: string;
+  contractVer: number;
   tokens: Token[];
   markets: Market[];
-  indexers: Indexer[];
+  indexers: Record<string, Indexer>;
   contracts: Contracts;
   networkUrl: string;
+  explorerUrl: string;
 }

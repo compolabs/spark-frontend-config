@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@compolabs/spark-orderbook-ts-sdk": "^1.5.4",
+    "@compolabs/spark-orderbook-ts-sdk": "^1.6.2",
     "@types/node": "^22.5.0",
     "fuels": "^0.93.0",
     "ts-node": "^10.9.2",

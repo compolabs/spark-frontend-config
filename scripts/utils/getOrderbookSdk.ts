@@ -7,11 +7,12 @@ export const getOrderbookSdk = () => {
     contractAddresses: {
       market: "",
       orderbook: config.contracts.orderbook,
-      tokenFactory: "",
+      multiAsset: config.contracts.multiAsset,
     },
     indexerConfig: {
-      httpUrl: config.indexers[0].httpUrl,
-      wsUrl: config.indexers[0].wsUrl,
+      // Mock
+      httpUrl: "https://indexer.bigdevenergy.link/67b693c/v1/graphql",
+      wsUrl: "wss://indexer.bigdevenergy.link/67b693c/v1/graphql",
     },
   });
 };
