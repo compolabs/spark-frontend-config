@@ -15,7 +15,7 @@ export interface Market {
   quoteAssetId: string;
   quoteAssetDecimals: number;
   priceDecimals: number;
-  feeAssetId: string;
+  version: number;
   contractId: string;
 }
 

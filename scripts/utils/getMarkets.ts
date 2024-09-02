@@ -28,7 +28,7 @@ export const getMarkets = async (
     quoteAssetId: info.quoteAssetId,
     quoteAssetDecimals: info.quoteAssetDecimals,
     priceDecimals: info.priceDecimals,
-    feeAssetId: info.feeAssetId,
+    version: info.version,
     contractId: marketsIds[index],
   }));
 };
