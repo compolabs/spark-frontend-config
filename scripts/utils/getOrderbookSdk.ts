@@ -5,7 +5,7 @@ export const getOrderbookSdk = () => {
   return new SparkOrderbook({
     networkUrl: config.networkUrl,
     contractAddresses: {
-      orderbook: config.contracts.orderbook,
+      registry: config.contracts.registry,
       multiAsset: config.contracts.multiAsset,
     },
   });
