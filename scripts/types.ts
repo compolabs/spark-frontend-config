@@ -25,7 +25,7 @@ export interface Indexer {
 }
 
 export interface Contracts {
-  orderbook: string;
+  registry: string;
   multiAsset: string;
 }
 
