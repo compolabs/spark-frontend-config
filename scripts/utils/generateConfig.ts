@@ -6,9 +6,10 @@ import { getMarkets } from "./getMarkets";
 import { getTokens } from "./getTokens";
 import { generateUniquePairs } from "./generateUniquePairs";
 import { Config } from "../types";
+import { getFileName } from "./getFileName";
 
 export const generateConfig = async (): Promise<void> => {
-  const { isDev } = getArgs();
+  const args = getArgs();
   const sdk = getOrderbookSdk();
   const baseConfig = config;
 
@@ -30,7 +31,7 @@ export const generateConfig = async (): Promise<void> => {
     },
   };
 
-  const fileName = isDev ? "config-dev" : "config";
+  const fileName = getFileName(args);
 
   await fs.writeFile(
     `${fileName}.json`,
