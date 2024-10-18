@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@compolabs/spark-orderbook-ts-sdk':
-        specifier: ^1.10.0
-        version: 1.10.0(fuels@0.94.8)(graphql@16.9.0)(react@18.3.1)
+        specifier: ^1.11.0
+        version: 1.11.0(fuels@0.94.8)(graphql@16.9.0)(react@18.3.1)
       '@types/node':
         specifier: ^22.5.0
         version: 22.5.0
@@ -48,8 +48,8 @@ packages:
       subscriptions-transport-ws:
         optional: true
 
-  '@compolabs/spark-orderbook-ts-sdk@1.10.0':
-    resolution: {integrity: sha512-XROry+2kYPJSwjjm3sBNNFRe8CxlTUHNJJnNaI7do4j0vkxdLvbeQ4/mB/vsvwOhPMNz5Jaj9SFTlD1ihiQXgQ==}
+  '@compolabs/spark-orderbook-ts-sdk@1.11.0':
+    resolution: {integrity: sha512-61G5Jgq9lZ1/LQ49AlEMm3aRjuqVuTH48qdfxd5X6or2tiOBzBi/I15Nv/6YNaeeJeJGINtkJOvlOaCFJEHATw==}
     engines: {node: '>=18'}
     peerDependencies:
       fuels: '>=0.94.8'
@@ -886,7 +886,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@compolabs/spark-orderbook-ts-sdk@1.10.0(fuels@0.94.8)(graphql@16.9.0)(react@18.3.1)':
+  '@compolabs/spark-orderbook-ts-sdk@1.11.0(fuels@0.94.8)(graphql@16.9.0)(react@18.3.1)':
     dependencies:
       '@apollo/client': 3.11.8(graphql-ws@5.16.0(graphql@16.9.0))(graphql@16.9.0)(react@18.3.1)
       bignumber.js: 9.1.2
