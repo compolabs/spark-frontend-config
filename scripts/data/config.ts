@@ -24,7 +24,7 @@ const data: Config = {
       "0xdc527289bdef8ec452f350c9b2d36d464a9ebed88eb389615e512a78e26e3509",
   },
   networkUrl: "https://testnet.fuel.network/v1/graphql",
-  explorerUrl: "https://app.fuel.network",
+  explorerUrl: "https://app-testnet.fuel.network",
 };
 
 export default data;
