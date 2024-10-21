@@ -1,7 +1,7 @@
 ### How to Update and Integrate the Configuration in the Spark Frontend
 
 > [!NOTE]
-> Latest version - 1.3.0
+> Latest version - 1.5.0
 
 To update the configuration for the Spark Frontend, follow these steps:
 
