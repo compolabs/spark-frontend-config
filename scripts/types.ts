@@ -31,6 +31,7 @@ export interface Contracts {
 
 export interface Config {
   version: string;
+  isMainnet: boolean;
   contractVer: number;
   tokens: Token[];
   markets: Market[];

@@ -4,6 +4,7 @@ import packageJson from "../../package.json";
 
 const data: Config = {
   version: packageJson.version,
+  isMainnet: false,
   contractVer: 0,
   tokens: [],
   markets: [],
