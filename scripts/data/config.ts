@@ -9,18 +9,18 @@ const data: Config = {
   tokens: [],
   markets: [],
   indexers: {
-    "0x81acb82a64ff799836c19f4e7f9871cf6d13a1e5d286e815f91c26a1b92a8195": {
+    "0xc5ed0d9b17beedd1c6c10a84bb496f12a5082aa3ce2ad55630bbcac22c64fcf4": {
       httpUrl: "https://indexer.bigdevenergy.link/67b693c/v1/graphql",
       wsUrl: "wss://indexer.bigdevenergy.link/67b693c/v1/graphql",
     },
-    "0x3830aa30ddd4843dd13b6af7ae4fb59d8c5933b1a98cba9a80897c8ba5557307": {
+    "0x944a3d62e65f3aefa7ac4a065eb9390a98806ef254aaece6df239ee78e6c2998": {
       httpUrl: "https://indexer.bigdevenergy.link/67b693c/v1/graphql",
       wsUrl: "wss://indexer.bigdevenergy.link/67b693c/v1/graphql",
     },
   },
   contracts: {
     registry:
-      "0xd76662328e464549b6f619401992127bed9b5cff3b46a3516e6b509d810b7035",
+      "0x0c26b7134516773469cd02030a783e43776d1fd26e0698b51af3cef4938e2925",
     multiAsset:
       "0xdc527289bdef8ec452f350c9b2d36d464a9ebed88eb389615e512a78e26e3509",
   },
