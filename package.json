@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node ./scripts/main.ts --dev",
-    "build:mainnet": "ts-node ./scripts/main.ts --mainnet",
-    "build:test": "ts-node ./scripts/main.ts --test"
+    "build": "ts-node ./scripts/main.ts"
   },
   "repository": {
     "type": "git",
@@ -17,8 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "@compolabs/spark-orderbook-ts-sdk": "^1.12.0",
+    "@inquirer/prompts": "^7.0.1",
     "@types/node": "^22.5.0",
-    "fuels": "^0.94.8",
+    "fuels": "^0.96.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },

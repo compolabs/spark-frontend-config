@@ -1,7 +1,7 @@
 import SparkOrderbook from "@compolabs/spark-orderbook-ts-sdk";
-import config from "../data/config";
+import { Config } from "../types";
 
-export const getOrderbookSdk = () => {
+export const getOrderbookSdk = (config: Config) => {
   return new SparkOrderbook({
     networkUrl: config.networkUrl,
     contractAddresses: {

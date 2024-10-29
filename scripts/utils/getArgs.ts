@@ -4,26 +4,22 @@ export interface Args {
   isTest: boolean;
 }
 
-export const getArgs = (): Args => {
-  const args = process.argv.slice(2);
-
+export const getArgs = (env: string): Args => {
   const appArgs = {
     isMainnet: false,
     isDev: false,
     isTest: false,
   };
 
-  args.forEach((arg) => {
-    if (arg === "--mainnet") {
-      appArgs.isMainnet = true;
-    }
-    if (arg === "--dev") {
-      appArgs.isDev = true;
-    }
-    if (arg === "--test") {
-      appArgs.isTest = true;
-    }
-  });
+  if (env === "prod") {
+    appArgs.isMainnet = true;
+  }
+  if (env === "dev") {
+    appArgs.isDev = true;
+  }
+  if (env === "test") {
+    appArgs.isTest = true;
+  }
 
   return appArgs;
 };
