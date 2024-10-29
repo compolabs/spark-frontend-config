@@ -2,7 +2,7 @@ import { Token } from "../types";
 
 const data: Token[] = [
   {
-    name: "Trump",
+    name: "Tremp",
     symbol: "TRMP",
     decimals: 9,
     assetId:
@@ -11,7 +11,7 @@ const data: Token[] = [
     precision: 9,
   },
   {
-    name: "Kamala",
+    name: "Kemele",
     symbol: "KMLA",
     decimals: 9,
     assetId:
