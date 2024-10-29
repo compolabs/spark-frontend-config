@@ -8,6 +8,7 @@ import { generateUniquePairs } from "./generateUniquePairs";
 import { Config } from "../types";
 import { getFileName } from "./getFileName";
 import { getUrls } from "./getUrls";
+import { getIndexerInfo } from "./getIndexerInfo";
 
 export const generateConfig = async ({
   env,
@@ -44,11 +45,14 @@ export const generateConfig = async ({
 
   const contractConfig = await sdk.getVersion();
 
+  const indexers = getIndexerInfo(markets);
+
   const extendedConfig: Config = {
     ...baseConfig,
     contractVer: contractConfig.version,
     tokens: [...baseConfig.tokens, ...tokens],
     markets: [...baseConfig.markets, ...markets],
+    indexers,
   };
 
   const fileName = getFileName(args);
