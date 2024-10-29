@@ -1,11 +1,11 @@
 {
   "name": "spark-frontend-config",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node ./scripts/main.ts",
-    "build:dev": "ts-node ./scripts/main.ts --dev",
+    "build": "ts-node ./scripts/main.ts --dev",
+    "build:mainnet": "ts-node ./scripts/main.ts --mainnet",
     "build:test": "ts-node ./scripts/main.ts --test"
   },
   "repository": {

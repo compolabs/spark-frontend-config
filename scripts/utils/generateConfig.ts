@@ -22,6 +22,7 @@ export const generateConfig = async (): Promise<void> => {
 
   const newConfig: Config = {
     ...baseConfig,
+    isMainnet: args.isMainnet,
     contractVer: contractConfig.version,
     tokens: [...baseConfig.tokens, ...tokens],
     markets: [...baseConfig.markets, ...markets],
