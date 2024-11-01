@@ -2,8 +2,11 @@ import { Address } from "fuels";
 import { generateConfig } from "./utils/generateConfig";
 
 import { input, select } from "@inquirer/prompts";
+import { loadLastAnswer, saveLastAnswer } from "./utils/inquirerUtils";
 
 const main = async () => {
+  const previousAnswers = await loadLastAnswer();
+
   const env = await select({
     message: "Select the environment:",
     choices: [
@@ -16,6 +19,7 @@ const main = async () => {
         value: "prod",
       },
     ],
+    default: previousAnswers?.env,
   });
 
   const registryAddress = await input({
@@ -28,6 +32,7 @@ const main = async () => {
         return "Address is invalid!";
       }
     },
+    default: previousAnswers?.registry,
   });
 
   let multiAssetAddress = "";
@@ -48,8 +53,15 @@ const main = async () => {
     });
   }
 
+  const indexerId = await input({
+    message: "Please enter the id of envio indexer:",
+    required: true,
+    default: previousAnswers?.indexerId,
+  });
+
   const fullConfiguration = await generateConfig({
     env,
+    indexerId,
     registryAddress,
     multiAssetAddress,
   });
@@ -61,6 +73,12 @@ const main = async () => {
     console.log("MultiAsset Address:", multiAssetAddress);
   }
   console.log(`\n${JSON.stringify(fullConfiguration, null, 2)}`);
+
+  await saveLastAnswer({
+    env,
+    indexerId,
+    registry: registryAddress,
+  });
 };
 
 main();

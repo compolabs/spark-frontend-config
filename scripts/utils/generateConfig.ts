@@ -12,10 +12,12 @@ import { getIndexerInfo } from "./getIndexerInfo";
 
 export const generateConfig = async ({
   env,
+  indexerId,
   registryAddress,
   multiAssetAddress,
 }: {
   env: string;
+  indexerId: string;
   registryAddress: string;
   multiAssetAddress: string;
 }): Promise<Config> => {
@@ -45,7 +47,7 @@ export const generateConfig = async ({
 
   const contractConfig = await sdk.getVersion();
 
-  const indexers = getIndexerInfo(markets);
+  const indexers = getIndexerInfo(markets, indexerId);
 
   const extendedConfig: Config = {
     ...baseConfig,
