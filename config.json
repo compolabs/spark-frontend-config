@@ -1,5 +1,5 @@
 {
-  "version": "1.6.2",
+  "version": "1.6.3",
   "isMainnet": true,
   "contractVer": 1539,
   "tokens": [
@@ -73,7 +73,7 @@
       "quoteAssetDecimals": 6,
       "priceDecimals": 9,
       "version": 1539,
-      "contractId": "0xbbe3a8eeea77082864c5553e06df3bce440688f89ce538efa67d38b1a470f334"
+      "contractId": "0x4c9010a055ab636c38caa0e4c7cf9eb4ad8d6f44ff6e094f23b3dcdd291ee093"
     },
     {
       "marketName": "tBTCtUSDC",
@@ -92,7 +92,7 @@
       "httpUrl": "https://indexer.bigdevenergy.link/55b0363/v1/graphql",
       "wsUrl": "wss://indexer.bigdevenergy.link/55b0363/v1/graphql"
     },
-    "0xbbe3a8eeea77082864c5553e06df3bce440688f89ce538efa67d38b1a470f334": {
+    "0x4c9010a055ab636c38caa0e4c7cf9eb4ad8d6f44ff6e094f23b3dcdd291ee093": {
       "httpUrl": "https://indexer.bigdevenergy.link/55b0363/v1/graphql",
       "wsUrl": "wss://indexer.bigdevenergy.link/55b0363/v1/graphql"
     },
