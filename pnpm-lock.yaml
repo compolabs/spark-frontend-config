@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@compolabs/spark-orderbook-ts-sdk':
-        specifier: ^1.13.0
-        version: 1.13.0(fuels@0.96.1)(graphql@16.9.0)(react@18.3.1)
+        specifier: ^1.14.0
+        version: 1.14.0(fuels@0.96.1)(graphql@16.9.0)(react@18.3.1)
       '@inquirer/prompts':
         specifier: ^7.0.1
         version: 7.0.1(@types/node@22.5.0)
@@ -51,8 +51,8 @@ packages:
       subscriptions-transport-ws:
         optional: true
 
-  '@compolabs/spark-orderbook-ts-sdk@1.13.0':
-    resolution: {integrity: sha512-j32uoK7wyJ58RsAPdbeJxGJCZALAgPwc7RHy47hR6fltFiig23KD6bl/NzxOuzZhsrXUBICxzYBmGrSufrOVeQ==}
+  '@compolabs/spark-orderbook-ts-sdk@1.14.0':
+    resolution: {integrity: sha512-5gw2MpDO/SP5aPc+oA5QeXry+1UbYbnqx0H7lrvcJMpFb0sbvjiIW6vxbbzbVitatejErYZ25VdzrD+lLDFsKQ==}
     engines: {node: '>=18'}
     peerDependencies:
       fuels: '>=0.96.1'
@@ -1015,7 +1015,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@compolabs/spark-orderbook-ts-sdk@1.13.0(fuels@0.96.1)(graphql@16.9.0)(react@18.3.1)':
+  '@compolabs/spark-orderbook-ts-sdk@1.14.0(fuels@0.96.1)(graphql@16.9.0)(react@18.3.1)':
     dependencies:
       '@apollo/client': 3.11.8(graphql-ws@5.16.0(graphql@16.9.0))(graphql@16.9.0)(react@18.3.1)
       bignumber.js: 9.1.2
