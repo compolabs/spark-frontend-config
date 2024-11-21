@@ -39,4 +39,5 @@ export interface Config {
   contracts: Contracts;
   networkUrl: string;
   explorerUrl: string;
+  sentioUrl: string;
 }

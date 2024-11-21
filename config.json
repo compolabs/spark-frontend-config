@@ -1,5 +1,5 @@
 {
-  "version": "1.7.0",
+  "version": "1.7.1",
   "isMainnet": true,
   "contractVer": 1539,
   "tokens": [
@@ -44,5 +44,6 @@
     "multiAsset": ""
   },
   "networkUrl": "https://mainnet.fuel.network/v1/graphql",
-  "explorerUrl": "https://app.fuel.network"
+  "explorerUrl": "https://app.fuel.network",
+  "sentioUrl": "https://app.sentio.xyz/api/v1/analytics/zhpv96/spark-processor/sql/execute"
 }
