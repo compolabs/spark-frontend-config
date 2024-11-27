@@ -29,15 +29,33 @@ export interface Contracts {
   multiAsset: string;
 }
 
-export interface Config {
-  version: string;
-  isMainnet: boolean;
-  contractVer: number;
-  tokens: Token[];
-  markets: Market[];
-  indexers: Record<string, Indexer>;
-  contracts: Contracts;
+export interface Links {
   networkUrl: string;
   explorerUrl: string;
   sentioUrl: string;
+}
+
+export interface ConfigSpot {
+  contractVer: number;
+  markets: Market[];
+  indexers: Record<string, Indexer>;
+  contracts: Contracts;
+}
+
+export interface ConfigPerp {
+  contractVer: number;
+  markets: Market[];
+  indexers: Record<string, Indexer>;
+  contracts: Contracts;
+}
+
+export interface Config {
+  version: string;
+  isMainnet: boolean;
+  tokens: Token[];
+
+  spot: ConfigSpot;
+  perp: ConfigPerp;
+
+  links: Links;
 }

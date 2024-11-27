@@ -1,69 +1,74 @@
 import * as fs from "fs/promises";
-import config from "../data/config";
-import { getOrderbookSdk } from "./getOrderbookSdk";
+import packageJson from "../../package.json";
+
 import { getArgs } from "./getArgs";
-import { getMarkets } from "./getMarkets";
 import { getTokens } from "./getTokens";
-import { generateUniquePairs } from "./generateUniquePairs";
-import { Config } from "../types";
+import { Config, Contracts } from "../types";
 import { getFileName } from "./getFileName";
 import { getUrls } from "./getUrls";
-import { getIndexerInfo } from "./getIndexerInfo";
+
+import { generateConfigSpot } from "../spot/generateConfigSpot";
+import { generateConfigPerp } from "../perp/generateConfigPerp";
 
 export const generateConfig = async ({
   env,
   indexerId,
-  registryAddress,
-  multiAssetAddress,
+  spot: spotData,
+  perp: perpData,
 }: {
   env: string;
   indexerId: string;
-  registryAddress: string;
-  multiAssetAddress: string;
+  spot: {
+    registryAddress: string;
+    multiAssetAddress: string;
+  };
+  perp: {
+    registryAddress: string;
+    multiAssetAddress: string;
+  };
 }): Promise<Config> => {
   const args = getArgs(env);
 
-  const urls = getUrls(args);
+  const links = getUrls(args);
+  const tokens = getTokens();
 
-  const baseConfig: Config = {
-    ...config,
-    isMainnet: args.isMainnet,
-    indexers: { ...config.indexers },
-    contracts: {
-      ...config.contracts,
-      registry: registryAddress,
-      multiAsset: multiAssetAddress,
-    },
-    networkUrl: urls.networkUrl,
-    explorerUrl: urls.explorerUrl,
+  const spotContracts: Contracts = {
+    registry: spotData.registryAddress,
+    multiAsset: spotData.multiAssetAddress,
   };
 
-  const sdk = getOrderbookSdk(baseConfig);
+  const spot = await generateConfigSpot({
+    links,
+    tokens,
+    contracts: spotContracts,
+    indexerId,
+    args,
+  });
 
-  const tokens = getTokens();
-  const pairs = generateUniquePairs(tokens);
+  const perp = await generateConfigPerp({
+    links,
+    tokens,
+    contracts: spotContracts,
+    indexerId,
+    args,
+  });
 
-  const markets = await getMarkets(pairs, sdk);
-
-  const contractConfig = await sdk.getVersion();
-
-  const indexers = getIndexerInfo(markets, indexerId, args.isMainnet);
-
-  const extendedConfig: Config = {
-    ...baseConfig,
-    contractVer: contractConfig.version,
-    tokens: [...baseConfig.tokens, ...tokens],
-    markets: [...baseConfig.markets, ...markets],
-    indexers,
+  const config: Config = {
+    version: packageJson.version,
+    isMainnet: args.isMainnet,
+    tokens,
+    spot,
+    perp,
+    links,
   };
 
   const fileName = getFileName(args);
 
   await fs.writeFile(
     `${fileName}.json`,
-    JSON.stringify(extendedConfig, null, 2),
+    JSON.stringify(config, null, 2),
     "utf8"
   );
 
-  return extendedConfig;
+  return config;
 };

@@ -1,12 +1,13 @@
 import SparkOrderbook from "@compolabs/spark-orderbook-ts-sdk";
 import { Market, Token } from "../types";
-
-import { formatMarketName } from "./formatMarketName";
+import { formatMarketName } from "../utils/formatMarketName";
+import { generateUniquePairs } from "../utils/generateUniquePairs";
 
 export const getMarkets = async (
-  assetPairs: [Token, Token][],
+  tokens: Token[],
   orderbookSdk: SparkOrderbook
 ): Promise<Market[]> => {
+  const assetPairs = generateUniquePairs(tokens);
   const pairs = assetPairs.map(
     ([tokenA, tokenB]) => [tokenA.assetId, tokenB.assetId] as [string, string]
   );
