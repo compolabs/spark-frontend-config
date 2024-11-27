@@ -47,7 +47,7 @@ export const generateConfig = async ({
 
   const contractConfig = await sdk.getVersion();
 
-  const indexers = getIndexerInfo(markets, indexerId);
+  const indexers = getIndexerInfo(markets, indexerId, args.isMainnet);
 
   const extendedConfig: Config = {
     ...baseConfig,
