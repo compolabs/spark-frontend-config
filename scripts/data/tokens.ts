@@ -21,6 +21,16 @@ const data: Token[] = [
       "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
     precision: 9,
   },
+  {
+    name: "USDT",
+    symbol: "USDT",
+    decimals: 6,
+    assetId:
+      "0xa0265fb5c32f6e8db3197af3c7eb05c48ae373605b8165b6f4a51c5b0ba4812e",
+    priceFeed:
+      "0x2b89b9dc8fdf9f34709a5b106b472f0f39bb6ca9ce04b0fd7f2e971688e2e53b",
+    precision: 2,
+  },
 ];
 
 export default data;
