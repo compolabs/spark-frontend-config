@@ -1,6 +1,6 @@
 {
   "name": "spark-frontend-config",
-  "version": "1.7.1",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,10 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@compolabs/spark-orderbook-ts-sdk": "^1.14.0",
+    "@compolabs/spark-orderbook-ts-sdk": "^1.14.1",
     "@inquirer/prompts": "^7.0.1",
     "@types/node": "^22.5.0",
-    "fuels": "^0.96.1",
+    "fuels": "^0.97.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },

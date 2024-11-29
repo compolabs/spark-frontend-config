@@ -2,10 +2,15 @@ import fs from "fs/promises";
 
 const LAST_ANSWER_FILE = "./last-answers.json";
 
-interface Answers {
+export interface Answers {
   env: string;
-  registry: string;
   indexerId: string;
+
+  spotRegistry: string;
+  spotMultiAsset: string;
+
+  perpRegistry: string;
+  perpMultiAsset: string;
 }
 
 export const loadLastAnswer = async (): Promise<Answers | undefined> => {
