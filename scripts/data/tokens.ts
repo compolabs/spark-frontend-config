@@ -31,6 +31,15 @@ const data: Token[] = [
       "0x2b89b9dc8fdf9f34709a5b106b472f0f39bb6ca9ce04b0fd7f2e971688e2e53b",
     precision: 2,
   },
+  {
+    name: "FUEL",
+    symbol: "FUEL",
+    decimals: 9,
+    assetId:
+      "0x1d5d97005e41cae2187a895fd8eab0506111e0e2f3331cd3912c15c24e3c1d82",
+    priceFeed: "",
+    precision: 9,
+  },
 ];
 
 export default data;
