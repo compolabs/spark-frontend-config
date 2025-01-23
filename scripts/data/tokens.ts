@@ -37,7 +37,48 @@ const data: Token[] = [
     decimals: 9,
     assetId:
       "0x1d5d97005e41cae2187a895fd8eab0506111e0e2f3331cd3912c15c24e3c1d82",
-    priceFeed: "",
+    priceFeed:
+      "0x8a757d54e5d34c7ff1aea8502a2d968686027a304d00418092aaf7e60ed98d95",
+    precision: 9,
+  },
+  {
+    name: "ezETH",
+    symbol: "ezETH",
+    decimals: 9,
+    assetId:
+      "0x91b3559edb2619cde8ffb2aa7b3c3be97efd794ea46700db7092abeee62281b0",
+    priceFeed:
+      "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+    precision: 9,
+  },
+  {
+    name: "pzETH",
+    symbol: "pzETH",
+    decimals: 9,
+    assetId:
+      "0x1493d4ec82124de8f9b625682de69dcccda79e882b89a55a8c737b12de67bd68",
+    priceFeed:
+      "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+    precision: 9,
+  },
+  {
+    name: "TRUMP",
+    symbol: "TRUMP",
+    decimals: 9,
+    assetId:
+      "0xa168394dda72a436becdbd920e7cdea302b49f7b1160ed13c5102ebf185f3bf4",
+    priceFeed:
+      "0xeaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a",
+    precision: 9,
+  },
+  {
+    name: "WETH",
+    symbol: "WETH",
+    decimals: 9,
+    assetId:
+      "0xa38a5a8beeb08d95744bc7f58528073f4052b254def59eba20c99c202b5acaa3",
+    priceFeed:
+      "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
     precision: 9,
   },
 ];
