@@ -19,7 +19,7 @@ const data: Token[] = [
       "0xf8f8b6283d7fa5b672b530cbb84fcccb4ff8dc40f8176ef4544ddb1f1952ad07",
     priceFeed:
       "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
-    precision: 9,
+    precision: 3,
   },
   {
     name: "USDT",
@@ -39,7 +39,7 @@ const data: Token[] = [
       "0x1d5d97005e41cae2187a895fd8eab0506111e0e2f3331cd3912c15c24e3c1d82",
     priceFeed:
       "0x8a757d54e5d34c7ff1aea8502a2d968686027a304d00418092aaf7e60ed98d95",
-    precision: 9,
+    precision: 5,
   },
   {
     name: "ezETH",
@@ -49,7 +49,7 @@ const data: Token[] = [
       "0x91b3559edb2619cde8ffb2aa7b3c3be97efd794ea46700db7092abeee62281b0",
     priceFeed:
       "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
-    precision: 9,
+    precision: 3,
   },
   {
     name: "pzETH",
@@ -59,7 +59,7 @@ const data: Token[] = [
       "0x1493d4ec82124de8f9b625682de69dcccda79e882b89a55a8c737b12de67bd68",
     priceFeed:
       "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
-    precision: 9,
+    precision: 3,
   },
   {
     name: "TRUMP",
