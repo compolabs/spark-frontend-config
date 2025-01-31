@@ -81,6 +81,26 @@ const data: Token[] = [
       "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
     precision: 3,
   },
+  {
+    name: "PSYCHO",
+    symbol: "PSYCHO",
+    decimals: 9,
+    assetId:
+      "0x86fa05e9fef64f76fa61c03f5906c87a03cb9148120b6171910566173d36fc9e",
+    priceFeed:
+      "0x0000000000000000000000000000000000000000000000000000000000000000",
+    precision: 9,
+  },
+  {
+    name: "USDF",
+    symbol: "USDF",
+    decimals: 9,
+    assetId:
+      "0x33a6d90877f12c7954cca6d65587c25e9214c7bed2231c188981c7114c1bdb78",
+    priceFeed:
+      "0x0000000000000000000000000000000000000000000000000000000000000000",
+    precision: 9,
+  },
 ];
 
 export default data;
