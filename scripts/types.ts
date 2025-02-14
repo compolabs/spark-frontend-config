@@ -2,7 +2,6 @@ export interface Token {
   name: string;
   symbol: string;
   decimals: number;
-  precision: number;
   assetId: string;
   priceFeed: string;
 }
@@ -17,6 +16,8 @@ export interface Market {
   priceDecimals: number;
   version: number;
   contractId: string;
+  isOpen: boolean;
+  precision: number;
 }
 
 export interface Indexer {

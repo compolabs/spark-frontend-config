@@ -21,6 +21,7 @@ export const getMarkets = async (
   const marketConfigs = await Promise.all(marketConfigPromises);
 
   return marketConfigs.map((info, index) => ({
+    isOpen: false,
     marketName: formatMarketName(info.baseAssetId, info.quoteAssetId),
     owner: info.owner,
     baseAssetId: info.baseAssetId,
@@ -30,5 +31,6 @@ export const getMarkets = async (
     priceDecimals: info.priceDecimals,
     version: info.version,
     contractId: marketsIds[index],
+    precision: 0,
   }));
 };
